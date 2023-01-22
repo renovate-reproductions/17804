@@ -1,0 +1,28 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot'           version '2.2.5.RELEASE' apply false
+	id "com.github.node-gradle.node" 		version "3.2.1"        	apply false
+}
+
+group = 'com.test'
+version = '0.0.1-SNAPSHOT'
+
+allprojects{
+	repositories {
+		mavenCentral()
+		maven{
+			url "http://repo.spring.io/plugins-release/"
+		}
+	}
+}
+
+// applying relevant plugins to the subprojects
+project(':backend') {
+	apply plugin: 'java'
+	apply plugin: 'org.springframework.boot'
+	apply plugin: 'io.spring.dependency-management'
+}
+
+test {
+	useJUnitPlatform()
+}
