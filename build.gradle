@@ -1,7 +1,7 @@
 plugins {
 	id 'java'
-	id 'org.springframework.boot'           version '2.2.5.RELEASE' apply false
-	id "com.github.node-gradle.node" 		version "3.2.1"        	apply false
+	id 'org.springframework.boot'           version '2.7.9' apply false
+	id "com.github.node-gradle.node" 		version "3.5.1"        	apply false
 }
 
 group = 'com.test'
